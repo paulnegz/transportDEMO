@@ -23,4 +23,7 @@ app.use('/demo', demo);
 app.use(cors());
 const port = 3000;
 
-app.listen(port, ()=>console.log('Server started on port ${port}'));
+// app.listen(port, ()=>console.log('Server started on port ${port}'));
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("The Server Has Started!");
+ });
