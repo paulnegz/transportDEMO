@@ -25,7 +25,8 @@ form.addEventListener('submit', (e) => {
     const choice = document.querySelector('input[name=group1]:checked').value;
     const data = {primaryMode: choice};
 
-    fetch('http://localhost:3000/demo', {
+    // fetch('http://localhost:3000/demo', {
+        fetch('/demo', {
         method: 'post',
         body: JSON.stringify(data),
         headers: new Headers({
@@ -34,7 +35,8 @@ form.addEventListener('submit', (e) => {
     }).then(res => res.json() ).then(data => console.log(data) ).catch(err => console.log(err));
 });
 
-fetch('http://localhost:3000/demo')
+// fetch('http://localhost:3000/demo')
+fetch('/demo')
     .then(res =>res.json())
     .then(data => {
         const votes  = data.votes;
