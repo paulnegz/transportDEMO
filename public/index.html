@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="./css/index.css" rel="stylesheet">
+
+    <title>Transport Demo</title>
+ </head>
+ <body>
+
+      <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+            <h3 class="header center teal-text text-lighten-2 noMargin">Public Transportation Questionnaire</h3>
+            <div class="row center">
+              <h6 class="header col s12 light">Your responses are anonymous and will only be used to develop the City Transportation Plan. Thank you for your participation!</h6>
+            </div>
+            <div class="row center">
+              <!-- <a href="http://paulnegedu.com/" id="download-button" class="btn-small waves-effect waves-light teal lighten-1">Get Started</a> -->
+
+            </div>
+            <br><br>
+    
+          </div>
+        </div>
+        <div class="parallax"><img src="https://images.unsplash.com/photo-1592924087948-2d32f1b82389?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjN8fGJ1c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Unsplashed background img 1"></div>
+      </div>
+    
+    
+      <div class="container">
+        <div class="section">
+    
+          <!--   Icon Section   -->
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                <h5 class="center">Instant Graphs </h5>
+                <p class="light">Graphs displaying results of survey can be display immediately(see 1. Live Chart)</p>
+    
+             </div>
+            </div>
+    
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+                <h5 class="center">Users Friendly Forms</h5>
+                <p class="light">Forms are designed to retrieve quantitative results</p>
+
+              </div>
+            </div>
+    
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+                <h5 class="center">Data is Easy To Use</h5>
+                <p class="light">Results from the survey can be represented in graphs/ excel sheet are designed to retrieve quantitative results</p>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+
+    <!--  QUESTIONNAIRE   -->    
+    <section class="qustionnaire container">
+        <div class="container">
+            <hr class="m-5">
+            <!-- Name and Phone Number -->
+            <div class="row">
+                <form class="col s12">
+                  <div class="row" style="margin: 0;">
+                    <div class="input-field col s12 m6" style="margin: 1;">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input id="icon_prefix" type="text" class="validate">
+                      <label for="icon_prefix">Name</label>
+                    </div>
+                    <div class="input-field col s12 m6" style="margin: 1;">
+                      <i class="material-icons prefix">phone</i>
+                      <input id="icon_telephone" type="tel" class="validate" placeholder="123-45-6378">
+                      <label for="icon_telephone">Telephone</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Birthday -->
+              <input type="text" name="bdate" id="bdate" class="datepicker" placeholder=" When is your Birthday?" style="width: 69%; height: 95%;" />
+                           
+            <h6>1. What is your primary mode of transportation? (live chart below)</h6>
+            <form id="poll-form">
+    
+                <!-- mine -->
+                <p class="selections">
+                    <label for="personalVehicle">
+                        <input name="group1" type="radio" id="personalVehicle" value="personalVehicle" checked />
+                        <span>Personal Vehicle</span>
+                    </label>
+                </p>
+                <p class="selections">
+                    <label for="Bus">
+                        <input name="group1" type="radio" id="Bus" value="Bus"/>
+                        <span>Bus</span>
+                    </label>
+                </p>
+                <p class="selections">
+                    <label for="commercialVehicle">
+                        <input name="group1" type="radio" id="commercialVehicle" value="commercialVehicle"/>
+                        <span>Commercial Vehicle</span>
+                    </label>
+                </p>
+                <p class="selections">
+                    <label for="Bicycle">
+                        <input name="group1" type="radio" id="Bicycle" value="Bicycle"/>
+                        <span>Bicycle</span>
+                    </label>
+                </p>
+                <!-- <p class="selections">
+                    <label for="Airplane">
+                        <input name="group1" type="radio" id="Airplane" value="Airplane"/>
+                        <span>Airplane</span>
+                    </label>
+                </p>
+    
+                <p class="selections">
+                    <label for="Train">
+                        <input name="group1" type="radio" id="Train" value="Train"/>
+                        <span>Train</span>
+                    </label>
+                </p>
+                <p class="selections">
+                    <label for="Ferry">
+                        <input name="group1" type="radio" id="Ferry" value="Ferry"/>
+                        <span>Ferry</span>
+                    </label>
+                </p> -->
+                <!-- <p class="">
+                    <div class="input-field inline noMargin">
+                        <input id="primaryMode" type="text" class="validate selections">
+                        <label for="primaryMode" class="selections">Other</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">please specify</span>
+                    </div>
+                </p> -->
+                <p>
+                    <input disabled value="Other(Demo version) " id="disabled" type="text" class="validate "  style="width: 69%;">
+
+                </p>
+                <div style="margin: auto; width: 20%;  ">
+                    <input type="submit" value="Submit" class ="btn margin" >
+                </div>
+                
+                
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    
+                <!-- slider -->
+                <hr class="m-5">
+                <div >
+                    <h6>2. How many miles do you drive in a day?(slider with numerical value)</h6>
+                    <p class="range-field">
+                        <input type="range" id="test5" min="0" max="100" />
+                    </p>
+                </div>
+
+                
+                <hr class="m-5">
+                <!-- Switch -->
+                <div class="switch" >
+                    <h6 style="display: inline;">3. Do you get car sick?(Yes/No switch)   </h6> 
+                    <label style="float: right; display: inline;">
+                    Yes
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                    No
+                    </label>
+                </div>    
+
+                <hr class="m-5" >
+                <!-- Dropdown Menu -->
+                <div class="dropDown"  >
+                    <h6 style="display: inline;">4. Prefer Mode of Transport?(drop down menu)   </h6> 
+                    <div class="input-field col s12">
+                        <select>
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="1">Car</option>
+                          <option value="2">Train</option>
+                          <option value="3">Ferry</option>
+                        </select>
+                    </div>
+                </div>
+    
+            </form> 
+        </div>
+    </section>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+    <!-- Pusher -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/7.0.2/pusher.min.js" integrity="sha512-eimbIwTgi6xenk305C+lvVqEeeNu9qnbcSCmlmcdFUPr6m2lNIn9iVJbm4qat/3IV2HR5qW7HviNno+EqbKi9A==" crossorigin="anonymous"></script>
+    <!-- CanvasJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA==" crossorigin="anonymous"></script>
+    <script src="init.js"></script>
+    <!-- my Script -->
+    <script src="main.js" ></script>
+</body>   
+</html>
