@@ -1,4 +1,13 @@
-const form = document.getElementById('poll-form');
+// sidenav-trigger
+// const locationForm = document.getElementById('location');
+// form.addEventListener('submit', (e) => {
+//     //close navbar
+    
+// });
+const body = document.querySelector('body');
+body.addEventListener("load", ()=>{
+    $('#contact-me-modal').modal('toggle')
+});
 
 //birthday
 var currYear = (new Date()).getFullYear();
@@ -19,7 +28,7 @@ $(document).ready(function(){
     $('select').formSelect();
   });
 
-
+const form = document.getElementById('poll-form');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const choice = document.querySelector('input[name=group1]:checked').value;
