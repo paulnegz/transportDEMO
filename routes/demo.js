@@ -14,8 +14,8 @@ const pusher = new Pusher({
 });
 
 
-router.get('/', (rewy, res)=>{
-    Vote.find().then(votes=> res.json({sucess: true, votes: votes}));
+router.get('/', (req, res)=>{
+    Vote.find().then(votes=> res.json({success: true, votes: votes}));
 });
 
 router.post('/', (req, res)=>{

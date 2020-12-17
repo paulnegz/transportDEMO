@@ -10,11 +10,16 @@ const app = express();
 const demo = require('./routes/demo')
 
 //Set publiic folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
-//body parser middleware frrom documention
+//body parser middleware from documention
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+//home page
+app.get("/", function(req, res){
+	res.render("./public/index.html");
+});
 
 //router to demo
 app.use('/demo', demo);
@@ -23,7 +28,8 @@ app.use('/demo', demo);
 app.use(cors());
 const port = 3000;
 
-// app.listen(port, ()=>console.log('Server started on port ${port}'));
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("The Server Has Started!");
- });
+app.listen(port, ()=>console.log('Server started on port ${port}'));
+
+// app.listen(process.env.PORT, process.env.IP, function(){
+//     console.log("The Server Has Started!");
+//  });
