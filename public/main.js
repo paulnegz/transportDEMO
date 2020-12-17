@@ -45,7 +45,7 @@ form.addEventListener('submit', (e) => {
             'Content-Type': 'application/json'
         })
     }).then(res => res.json() ).then(data => console.log(data) ).catch(err => console.log(err));
-},{passive: false});
+},{passive: true});
 
 // fetch('http://localhost:3000/demo')
 fetch('/demo')
