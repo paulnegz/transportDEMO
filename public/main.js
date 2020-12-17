@@ -5,11 +5,13 @@
     
 // });
 let body = document.querySelector('body');
-body.addEventListener("load",popOneTimeAlert );
+body.addEventListener("load",popOneTimeAlert);
 function popOneTimeAlert(){
     $('#contact-me-modal').modal('toggle');
-    body.removeEventListener("load", popOneTimeAlert);
+    body.removeEventListener("load", popOneTimeAlert,true);
+    console.log("here girl", count);
 }
+
 
 //birthday
 var currYear = (new Date()).getFullYear();
@@ -57,9 +59,7 @@ fetch('/demo')
             (acc[vote.primaryMode] = (acc[vote.primaryMode] || 0) + parseInt(vote.points)), acc),
             {}
         );
-        
-        console.log(data);
-    
+
     
 let  dataPoints=[ 
     {label: 'personalVehicle', y: voteCounts.personalVehicle },
