@@ -4,10 +4,12 @@
 //     //close navbar
     
 // });
-const body = document.querySelector('body');
-body.addEventListener("load", ()=>{
-    $('#contact-me-modal').modal('toggle')
-});
+let body = document.querySelector('body');
+body.addEventListener("load",popOneTimeAlert );
+function popOneTimeAlert(){
+    $('#contact-me-modal').modal('toggle');
+    body.removeEventListener("load", popOneTimeAlert);
+}
 
 //birthday
 var currYear = (new Date()).getFullYear();
