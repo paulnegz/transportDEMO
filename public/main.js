@@ -5,11 +5,11 @@
     
 // });
 let body = document.querySelector('body');
-body.addEventListener("load",(popOneTimeAlert),{passive: true});
+body.addEventListener("load",(popOneTimeAlert),{passive: false});
 function popOneTimeAlert(e){
     e.preventDefault();
     $('#contact-me-modal').modal('toggle');
-    body.removeEventListener("loadk", popOneTimeAlert, {passive: true});
+    body.removeEventListener("loadk", popOneTimeAlert, {passive: false});
 }
 
 //birthday
@@ -45,7 +45,7 @@ form.addEventListener('submit', (e) => {
             'Content-Type': 'application/json'
         })
     }).then(res => res.json() ).then(data => console.log(data) ).catch(err => console.log(err));
-},{passive: true});
+},{passive: false});
 
 // fetch('http://localhost:3000/demo')
 fetch('/demo')
