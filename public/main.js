@@ -5,13 +5,12 @@
     
 // });
 let body = document.querySelector('body');
-body.addEventListener("load",popOneTimeAlert);
-function popOneTimeAlert(){
+body.addEventListener("load",(popOneTimeAlert),{passive: true});
+function popOneTimeAlert(e){
+    e.preventDefault();
     $('#contact-me-modal').modal('toggle');
-    body.removeEventListener("load", popOneTimeAlert,true);
-    console.log("here girl", count);
+    body.removeEventListener("loadk", popOneTimeAlert, {passive: true});
 }
-
 
 //birthday
 var currYear = (new Date()).getFullYear();
@@ -46,7 +45,7 @@ form.addEventListener('submit', (e) => {
             'Content-Type': 'application/json'
         })
     }).then(res => res.json() ).then(data => console.log(data) ).catch(err => console.log(err));
-});
+},{passive: false});
 
 // fetch('http://localhost:3000/demo')
 fetch('/demo')
